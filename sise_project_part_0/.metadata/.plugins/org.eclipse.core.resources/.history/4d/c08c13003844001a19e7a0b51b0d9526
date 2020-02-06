@@ -1,0 +1,18 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import pt.ulisboa.tecnico.learnjava.bank.services.Services;
+
+public class friend {
+	
+	public Services services = new Services();
+
+	public friend (String phoneNumber , int amount) {
+		if (!MBWAY.datebase.containsKey(phoneNumber) && 
+				services.getAccountByIban(MBWAY.datebase.get(phoneNumber)).getBalance() < amount) {	
+			System.out.println("Oh no! One of your friends does not have money to pay!");
+		} else {
+		}
+	}
+	
+
+}

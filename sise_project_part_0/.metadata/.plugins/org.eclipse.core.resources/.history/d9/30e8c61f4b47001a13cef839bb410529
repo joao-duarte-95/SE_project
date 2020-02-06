@@ -1,0 +1,49 @@
+package pt.ulisboa.tecnico.learnjava.sibs.sibs;
+
+
+import static org.junit.Assert.assertEquals; 
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import static org.mockito.Mockito.*;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Bank;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Client;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.BankException;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.ClientException;
+import pt.ulisboa.tecnico.learnjava.bank.services.Services;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Deposited;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Operation;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Sibs;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.TransferOperation;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Withdrawn;
+import pt.ulisboa.tecnico.learnjava.sibs.exceptions.OperationException;
+import pt.ulisboa.tecnico.learnjava.sibs.exceptions.SibsException;
+
+public class TransferMethodCancelWithdrawnTest {
+	
+	private Services mockServices2
+	
+	@Before
+	public void setUp() throws BankException, AccountException, ClientException {
+		Services mockServices2 = mock(Services.class);
+		Sibs sibs2 = new Sibs(100, mockServices2);
+	}
+
+	@Test
+	public void mockTransferTestCancelWithdrawn() throws  AccountException, SibsException, OperationException {
+		when(mockServices2.accountValidation("source", "target")).thenReturn(true);
+		when(mockServices2.equalBankValidation("source", "target")).thenReturn(true);
+		sibs2.transfer("source", "target", 100);
+		Operation operation =  sibs2.getOperation(0);
+		sibs2.processOperation();
+		((TransferOperation) operation).setState(new Withdrawn());
+		sibs2.cancelOperation(0);
+		verify(mockServices2).withdraw("source", 100);
+		verify(mockServices2).deposit("target", 100);
+		verify(mockServices2).deposit("source", 100);
+		assertEquals(sibs2.getNumberOfOperations(), 1);
+	}
+
+}

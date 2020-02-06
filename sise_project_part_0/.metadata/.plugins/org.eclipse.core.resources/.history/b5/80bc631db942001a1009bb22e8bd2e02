@@ -1,0 +1,10 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import java.util.HashMap;
+
+public class MBWAY {
+
+	public  HashMap<String, C> datebase = new HashMap<>();
+
+
+}

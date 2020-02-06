@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java" project="sise-sibs" tests="49" started="49" failures="0" errors="0" ignored="0">
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetNumberOfOperationsMethodTest" time="0.001">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetNumberOfOperationsMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.RemoveOperationMethodTest" time="0.0">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.RemoveOperationMethodTest" time="0.0"/>
+    <testcase name="positionAboveLength" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.RemoveOperationMethodTest" time="0.0"/>
+    <testcase name="negativePosition" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.RemoveOperationMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationErrorMethodTest2" time="0.657">
+    <testcase name="mockErrorDepositedTestForDifferentBanks" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationErrorMethodTest2" time="0.649"/>
+    <testcase name="mockErrorRegisteredTest" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationErrorMethodTest2" time="0.002"/>
+    <testcase name="mockErrorWithdrawnTest" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationErrorMethodTest2" time="0.005"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetTotalValueOfOperationsMethodTest" time="0.001">
+    <testcase name="successTwo" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetTotalValueOfOperationsMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodTest" time="0.014">
+    <testcase name="mockTransferTestBetweenDiferentBanks" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodTest" time="0.007"/>
+    <testcase name="successProcessed" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodTest" time="0.003"/>
+    <testcase name="mockTransferTestProcess" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodTest" time="0.004"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.operation.PaymentOperationConstructorMethodTest" time="0.002">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.PaymentOperationConstructorMethodTest" time="0.0"/>
+    <testcase name="nullTargetIban" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.PaymentOperationConstructorMethodTest" time="0.0"/>
+    <testcase name="emptyTargetIban" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.PaymentOperationConstructorMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationSuccessRetryMethodTest2" time="0.006">
+    <testcase name="mockSuccessRetryRegisteredTest" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationSuccessRetryMethodTest2" time="0.001"/>
+    <testcase name="mockSuccessRetrDepositedTestForDifferentBanks" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationSuccessRetryMethodTest2" time="0.001"/>
+    <testcase name="mockSuccessRetrWithdrawnTest" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationSuccessRetryMethodTest2" time="0.004"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetOperationMethodTest" time="0.001">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetOperationMethodTest" time="0.0"/>
+    <testcase name="positionAboveLength" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetOperationMethodTest" time="0.001"/>
+    <testcase name="negativePosition" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetOperationMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetTotalValueOfOperationsForTypeMethodTest" time="0.001">
+    <testcase name="successTwo" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetTotalValueOfOperationsForTypeMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationProcessMethodTest" time="0.006">
+    <testcase name="mockProcessTestCancelMethod" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationProcessMethodTest" time="0.001"/>
+    <testcase name="mockProcessTestForTheSameBank" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationProcessMethodTest" time="0.002"/>
+    <testcase name="mockProcessTestForDifferentBank" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationProcessMethodTest" time="0.003"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationCancelMethodTest" time="0.007">
+    <testcase name="mockCancelTestForWithrawn" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationCancelMethodTest" time="0.002"/>
+    <testcase name="mockCancelTestForCompleted" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationCancelMethodTest" time="0.002"/>
+    <testcase name="mockCancelTestForDeposited" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationCancelMethodTest" time="0.003"/>
+    <testcase name="mockCancelTestForRegisterd" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationCancelMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.002">
+    <testcase name="transferOperation15" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.0"/>
+    <testcase name="transferOperation1000" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.001"/>
+    <testcase name="paymentOperation1000" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.0"/>
+    <testcase name="paymentOperation1" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.0"/>
+    <testcase name="paymentOperation15" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.001"/>
+    <testcase name="transferOperation1" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.CommissionMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodCancelTest" time="0.01">
+    <testcase name="successCanceled" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodCancelTest" time="0.002"/>
+    <testcase name="mockTransferTestCancelDeposited" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodCancelTest" time="0.004"/>
+    <testcase name="mockTransferTestCancelWithdrawn" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferMethodCancelTest" time="0.004"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationRetryMethodTest" time="0.006">
+    <testcase name="mockErrorDepositedTestForDifferentBanks" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationRetryMethodTest" time="0.002"/>
+    <testcase name="mockErrorRegisteredTest" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationRetryMethodTest" time="0.002"/>
+    <testcase name="mockErrorWithdrawnTest" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.TransferOperationRetryMethodTest" time="0.002"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.002">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.001"/>
+    <testcase name="nullTargetIban" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.0"/>
+    <testcase name="nonPositiveValue" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.0"/>
+    <testcase name="emptySourceIban" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.0"/>
+    <testcase name="nullSourceIban" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.0"/>
+    <testcase name="emptyTargetIban" classname="pt.ulisboa.tecnico.learnjava.sibs.operation.TransferOperationConstructorMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.sibs.sibs.AddOperationMethodTest" time="0.001">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.AddOperationMethodTest" time="0.0"/>
+    <testcase name="successWithDelete" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.AddOperationMethodTest" time="0.0"/>
+    <testcase name="failIsFull" classname="pt.ulisboa.tecnico.learnjava.sibs.sibs.AddOperationMethodTest" time="0.001"/>
+  </testsuite>
+</testrun>

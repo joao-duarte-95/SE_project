@@ -1,0 +1,18 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import java.util.Random;
+
+import pt.ulisboa.tecnico.learnjava.bank.services.Services;
+
+public class confirmMBWAYController {
+
+
+	public void confirmMBWAY (String phoneNumber, int code) {
+		MBWAY m = new MBWAY();
+		if(m.datebase.get(phoneNumber).getMbayCode() == code) {
+			System.out.println("MBWay Association Confirmed Successfully! );
+		} else {
+			System.out.println("Wrong phone number!");
+		}
+	}
+}

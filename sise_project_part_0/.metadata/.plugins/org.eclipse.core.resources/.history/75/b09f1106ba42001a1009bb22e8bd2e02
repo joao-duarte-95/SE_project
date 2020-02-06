@@ -1,0 +1,46 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import java.util.Random;
+import java.util.Scanner;
+
+import pt.ulisboa.tecnico.learnjava.bank.domain.Bank;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Client;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.BankException;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.ClientException;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Bank.AccountType;
+import pt.ulisboa.tecnico.learnjava.bank.services.Services;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Sibs;
+
+public class CLI {
+	
+	public void exit() {
+		System.exit(0);
+	}
+	
+
+	public static void main(String[] args) throws BankException, ClientException, AccountException {
+		Scanner input = new Scanner(System.in);
+		String command = input.next();
+		CLI cli = new CLI();
+		associateMBWAYController controller = new associateMBWAYController();
+		confirmMBWAYController c = new confirmMBWAYController();
+		Services service = new Services();
+		Sibs sibs = new Sibs(100, service);
+		Bank bank = new Bank("CGD");
+		Client client = new Client(bank, "Joao", "Duarte", "123456789", "123456789", "Lisboa", 33);
+		String iban = bank.createAccount(AccountType.CHECKING, client, 100, 0);
+		MBWAY m = new MBWAY();
+		while (true) {
+			if(command.equals("exit")) {
+				cli.exit();
+			} else if (command.startsWith("associate-mbway")){
+				controller.associateMBWAY(input.next().substring(0, 6), input.next().substring(0, 9));
+			} else if (command.startsWith("confirm-mbway")){
+				c.confirmMBWAY(phoneNinput.next().substring(0, 6), input.next().substring(0, 9));
+			}
+			command = input.next();
+		}
+	}
+
+}

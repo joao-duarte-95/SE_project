@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Withrawn"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Cancelled"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.cli.MBWAYtransferController"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Sibs"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.State"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.bank.services.Services"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.cli.Friend"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.cli.MBWAYsplitBillController"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.cli.MBWAY"/>
+    <fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.sibs.GetOperationMethodTest"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Deposited"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Withdrawn"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.bank.domain.Account"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.ErrorState"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.TransferOperation"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Registered"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Retry"/>
+    <fullyQualifiedTypeName name="pt.ulisboa.tecnico.learnjava.sibs.domain.Completed"/>
+</qualifiedTypeNameHistroy>

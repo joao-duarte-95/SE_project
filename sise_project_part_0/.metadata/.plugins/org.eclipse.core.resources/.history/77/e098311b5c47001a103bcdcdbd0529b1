@@ -1,0 +1,18 @@
+package pt.ulisboa.tecnico.learnjava.sibs.domain;
+
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException;
+
+public class Registered extends State {
+
+	public void process(Sibs sibs, TransferOperation transferOperation) throws AccountException {
+		try sibs.services.withdraw(transferOperation.getTargetIban(), transferOperation.getValue());
+				sibs.services.deposit(transferOperation.getSourceIban(), transferOperation.getValue());
+		sibs.services.withdraw(transferOperation.getSourceIban(), transferOperation.getValue());
+		transferOperation.setState(new Withdrawn());
+	}
+	
+	public void cancel(Sibs sibs, TransferOperation transferOperation) throws AccountException {
+		transferOperation.setState(new Cancelled());
+	}
+
+}

@@ -1,0 +1,15 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+public class friend {
+
+	public frie(String phoneNumber , int amount) {
+			if (MBWAY.datebase.containsKey(phoneNumber) && 
+					services.getAccountByIban(MBWAY.datebase.get(phoneNumber)).getBalance() >= amount) {
+				
+			} else {
+				System.out.println("Oh no! One of your friends does not have money to pay!");
+			}
+		}
+	}
+
+}

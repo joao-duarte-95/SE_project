@@ -1,0 +1,27 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import pt.ulisboa.tecnico.learnjava.bank.domain.Bank.AccountType;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException;
+import pt.ulisboa.tecnico.learnjava.bank.services.Services;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Sibs;
+import pt.ulisboa.tecnico.learnjava.sibs.exceptions.OperationException;
+import pt.ulisboa.tecnico.learnjava.sibs.exceptions.SibsException;
+
+public class MBWAYtransferController {
+
+	public void MBWAYtransfer(String sourcePhoneNumber, String targetPhoneNumber, int amount) throws SibsException, AccountException, OperationException {
+		Services services = new Services();
+		Sibs sibs = new Sibs(100, services);
+		if(MBWAY.datebase.containsKey(sourcePhoneNumber) &&  MBWAY.datebase.containsKey(targetPhoneNumber)) {
+			sibs.addOperation(AccountType.CHECKING, MBWAY.datebase.get(sourcePhoneNumber), MBWAY.datebase.get(targetPhoneNumber), amount);
+			sibs.transfer(MBWAY.datebase.get(sourcePhoneNumber), MBWAY.datebase.get(targetPhoneNumber), amount);
+			System.out.println("Transfer successful!");
+			System.out.println(services.getAccountByIban(MBWAY.datebase.get(sourcePhoneNumber)).getBalance());
+			System.out.println(services.getAccountByIban(MBWAY.datebase.get(targetPhoneNumber)).getBalance());
+		} else {
+			System.out.println("Could not complete transfer!");
+			
+		}
+		
+	}
+}

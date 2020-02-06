@@ -1,0 +1,16 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+public class confirmMBWAYController {
+
+	public void confirmMBWAY (String phoneNumber, int code) {
+		MBWAY m = new MBWAY();
+		if(m.datebase.containsKey(phoneNumber)) {
+			if(m.datebase.get(phoneNumber).getMbayCode() == code) {
+				System.out.println("MBWay Association Confirmed Successfully!");
+			} else {
+				System.out.println("Wrong confirmation code!");
+			}
+			
+		}
+	}
+}

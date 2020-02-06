@@ -1,0 +1,7 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+public class MBWAY {
+
+	private static HashMap<Client, code> datebase = new HashMap<>();
+
+}

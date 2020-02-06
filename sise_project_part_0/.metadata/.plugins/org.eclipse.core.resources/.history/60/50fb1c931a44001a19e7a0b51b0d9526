@@ -1,0 +1,13 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import java.util.HashMap;
+
+import pt.ulisboa.tecnico.learnjava.bank.domain.Account;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Client;
+
+public class MBWAY {
+
+	public static HashMap<String, Account> datebase = new HashMap<>();
+
+
+}

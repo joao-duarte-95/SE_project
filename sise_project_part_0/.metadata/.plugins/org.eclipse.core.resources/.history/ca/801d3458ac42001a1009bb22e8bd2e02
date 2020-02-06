@@ -1,0 +1,37 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import java.util.Random;
+import java.util.Scanner;
+
+import pt.ulisboa.tecnico.learnjava.bank.domain.Bank;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Client;
+import pt.ulisboa.tecnico.learnjava.bank.domain.Bank.AccountType;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.BankException;
+import pt.ulisboa.tecnico.learnjava.bank.exceptions.ClientException;
+import pt.ulisboa.tecnico.learnjava.bank.services.Services;
+import pt.ulisboa.tecnico.learnjava.sibs.domain.Sibs;
+
+public class associateMBAYController {
+
+	public void associateMBWAY (String iban, String phoneNumber) {
+		Services service = new Services();
+		Random rand = new Random();
+		int code = rand.nextInt(999999); 
+		if(service.getAccountByIban(iban).getClient().getPhoneNumber().equals(phoneNumber)) {
+			service.getAccountByIban(iban).getClient().setMbayCode(code);
+			System.out.println("Code: " + code + " (don’t share it with anyone)");
+		} else {
+			System.out.println("Wrong phone number!");
+		}
+	}
+	
+	public static void main(String[] args) throws BankException, ClientException {
+		Services service = new Services();
+		Sibs sibs = new Sibs(100, service);
+		Bank bank = new Bank("CGD");
+		Client client = new Client(bank, "Joao", "Duarte", "12345678", "123456789", "Lisboa", 33);
+		associateMBAYController cc = new associateMBAYController();
+		String iban = bank.createAccount(AccountType.CHECKING, this.client, 100, 0);
+		cc.associateMBWAY(iban, phoneNumber);
+	}
+}

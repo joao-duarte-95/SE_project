@@ -1,0 +1,9 @@
+package pt.ulisboa.tecnico.learnjava.sibs.cli;
+
+import java.util.HashMap;
+
+public class MBWAY {
+
+	private static HashMap<Client, Integer> datebase = new HashMap<>();
+
+}
