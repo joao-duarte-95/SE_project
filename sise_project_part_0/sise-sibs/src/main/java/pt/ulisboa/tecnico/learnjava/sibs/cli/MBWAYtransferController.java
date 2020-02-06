@@ -8,8 +8,7 @@ import pt.ulisboa.tecnico.learnjava.sibs.exceptions.SibsException;
 
 public class MBWAYtransferController {
 
-	public void MBWAYtransfer(Class type, String sourcePhoneNumber, String targetPhoneNumber, int amount) throws SibsException, AccountException, OperationException {
-		Services services = new Services();
+	public void MBWAYtransfer(Class type, String sourcePhoneNumber, String targetPhoneNumber, int amount, Services services) throws SibsException, AccountException, OperationException {
 		Sibs sibs = new Sibs(100, services);
 		if(MBWAY.datebase.containsKey(sourcePhoneNumber) &&  MBWAY.datebase.containsKey(targetPhoneNumber)) {
 			sibs.transfer(MBWAY.datebase.get(sourcePhoneNumber), MBWAY.datebase.get(targetPhoneNumber), amount);

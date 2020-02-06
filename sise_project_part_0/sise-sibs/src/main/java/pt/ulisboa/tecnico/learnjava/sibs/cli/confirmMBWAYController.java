@@ -4,8 +4,7 @@ import pt.ulisboa.tecnico.learnjava.bank.services.Services;
 
 public class confirmMBWAYController {
 
-	public void confirmMBWAY (String phoneNumber, int code) {
-		Services services = new Services();
+	public void confirmMBWAY (String phoneNumber, int code, Services services) {
 		if(MBWAY.datebase.containsKey(phoneNumber)) {
 			if(services.getAccountByIban(MBWAY.datebase.get(phoneNumber)).getClient().getMbayCode() == code) {
 				System.out.println("MBWay Association Confirmed Successfully!");

@@ -11,12 +11,13 @@ import pt.ulisboa.tecnico.learnjava.bank.exceptions.ClientException;
 public class Client {
 	private final Set<Account> accounts = new HashSet<Account>();
 
-	private final Bank bank;
-	private final String firstName;
-	private final String lastName;
-	private final String nif;
-	private final String phoneNumber;
-	private final String address;
+	private Bank bank;
+	private String firstName;
+	private String lastName;
+	private String nif;
+	private String phoneNumber;
+	private String address;
+	private IDCard idCard;
 	private int age;
 	private Integer mbayCode;
 
@@ -35,6 +36,14 @@ public class Client {
 		this.mbayCode = null;
 
 		bank.addClient(this);
+	}
+	
+	public Client(Bank bank, String phoneNumber, String address, IDCard idCard) {
+		this.bank = bank;
+		this.idCard = idCard;
+		this.phoneNumber = phoneNumber;
+		this.address = address;
+		this.mbayCode = null;
 	}
 
 	private void checkParameters(Bank bank, String nif, String phoneNumber, int age) throws ClientException {

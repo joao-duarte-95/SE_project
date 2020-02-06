@@ -1,0 +1,9 @@
+package pt.ulisboa.tecnico.learnjava.bank.domain;
+
+public class IDCard {
+
+	public IDCard(String firstName, String lastName, String nif, int age) {
+		
+	}
+
+}

@@ -2,14 +2,12 @@ package pt.ulisboa.tecnico.learnjava.sibs.cli;
 
 import pt.ulisboa.tecnico.learnjava.bank.exceptions.AccountException;
 import pt.ulisboa.tecnico.learnjava.bank.services.Services;
-import pt.ulisboa.tecnico.learnjava.sibs.domain.Sibs;
 import pt.ulisboa.tecnico.learnjava.sibs.exceptions.OperationException;
 import pt.ulisboa.tecnico.learnjava.sibs.exceptions.SibsException;
 
 public class MBWAYsplitBillController {
 	
 	public Friend [] friends;
-	public Services services = new Services();
 	public int count = 0 ;
 	
 	public void resetCount() {
@@ -30,7 +28,7 @@ public class MBWAYsplitBillController {
 		count ++;
 	}
 	
-	public void MBWAYsplitBill(int numberOfFriends, int amount) throws SibsException, AccountException, OperationException {
+	public void MBWAYsplitBill(int numberOfFriends, int amount, Services service) throws SibsException, AccountException, OperationException {
 		if (count == numberOfFriends) {
 			String target = friends[0].phoneNumber;
 			for (int i = 1; i < numberOfFriends; i++) {
@@ -39,7 +37,7 @@ public class MBWAYsplitBillController {
 					return;
 				}
 				MBWAYtransferController tc = new MBWAYtransferController();
-				tc.MBWAYtransfer(MBWAYsplitBillController.class, friends[i].phoneNumber, target, friends[i].amount);
+				tc.MBWAYtransfer(MBWAYsplitBillController.class, friends[i].phoneNumber, target, friends[i].amount, service);
 			}
 			System.out.println("Bill payed successfully!"); resetCount();
 		} else if (count < numberOfFriends){

@@ -45,11 +45,11 @@ public class CLI {
 			if(command.equals("exit")) {
 				cli.exit();
 			} else if (command.startsWith("associate-mbway")) {
-				controller1.associateMBWAY(input.next(), input.next());
+				controller1.associateMBWAY(input.next(), input.next(), service);
 			} else if (command.startsWith("confirm-mbway")) {
-				controller2.confirmMBWAY(input.next(), Integer.valueOf(input.next()));
+				controller2.confirmMBWAY(input.next(), Integer.valueOf(input.next()), service);
 			} else if (command.startsWith("mbway-transfer")) {
-				controller3.MBWAYtransfer(MBWAYtransferController.class, input.next(),  input.next(), Integer.valueOf(input.next()));
+				controller3.MBWAYtransfer(MBWAYtransferController.class, input.next(),  input.next(), Integer.valueOf(input.next()), service);
 			} else if (command.startsWith("mbway-split-bill")) {
 				int numberOfFriends = Integer.valueOf(input.next());
 				int totalAmount = Integer.valueOf(input.next());
@@ -63,7 +63,7 @@ public class CLI {
 						break;
 					}
 				}
-				controller4.MBWAYsplitBill(numberOfFriends, totalAmount);
+				controller4.MBWAYsplitBill(numberOfFriends, totalAmount, service);
 			} else {
 				System.out.println("Command not correct!");
 			}
@@ -71,6 +71,6 @@ public class CLI {
 		}
 		
 	}
-
+	
 
 }

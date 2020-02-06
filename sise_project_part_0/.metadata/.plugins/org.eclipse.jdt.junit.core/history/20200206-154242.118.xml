@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="java (1)" project="sise-bank" tests="72" started="72" failures="0" errors="0" ignored="0">
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.016">
+    <testcase name="isInactiveAccount" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="successInactiveAccount" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="withdrawActiveAccount" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="balanceOfAccountIsZeroAndCheckingIsNull" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="sumOfBalancesIsNegative" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="depositInactiveAccount" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="depositActiveAccount" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="withdrawInactiveAccount" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="clientHasAllThreeInactive" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="countNumberOfInactiveAccountsForClientThatHasOneActiveAndTwoInactive" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.011"/>
+    <testcase name="differentClients" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.001"/>
+    <testcase name="balanceOfAccountIsZeroAndCheckingIsNotNull" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="CheckingClientHasOver18" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.001"/>
+    <testcase name="countNumberOfInactiveAccountsForClientThatHasAllThreeInactive" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.0"/>
+    <testcase name="SalaryClientHasOver18" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.001"/>
+    <testcase name="SavingsClientHasOver18" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.001"/>
+    <testcase name="clientHasOneActiveAndTwoInactive" classname="pt.ulisboa.tecnico.learnjava.bank.exam.ExamTests" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.002">
+    <testcase name="negativeAmountForAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.001"/>
+    <testcase name="noMultipleOf10ForYoung" classname="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.0"/>
+    <testcase name="successForYoung" classname="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.0"/>
+    <testcase name="successForSavings" classname="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.0"/>
+    <testcase name="successForAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.001"/>
+    <testcase name="noMultipleValueForSavings" classname="pt.ulisboa.tecnico.learnjava.bank.account.DepositMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.DeleteAccountMethodTest" time="0.0">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.bank.DeleteAccountMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.services.accountValidationMethodTest" time="0.001">
+    <testcase name="successExistingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.services.accountValidationMethodTest" time="0.001"/>
+    <testcase name="successNotExistingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.services.accountValidationMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.DeleteClientMethodTest" time="0.002">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.bank.DeleteClientMethodTest" time="0.001"/>
+    <testcase name="noClientForNif" classname="pt.ulisboa.tecnico.learnjava.bank.bank.DeleteClientMethodTest" time="0.001"/>
+    <testcase name="successClientWithAccounts" classname="pt.ulisboa.tecnico.learnjava.bank.bank.DeleteClientMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.GetTotalBalanceMethodTest" time="0.005">
+    <testcase name="fiveAccounts" classname="pt.ulisboa.tecnico.learnjava.bank.bank.GetTotalBalanceMethodTest" time="0.004"/>
+    <testcase name="noAccounts" classname="pt.ulisboa.tecnico.learnjava.bank.bank.GetTotalBalanceMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.account.GetAccountIdMethodTest" time="0.0">
+    <testcase name="successForSavingsAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.GetAccountIdMethodTest" time="0.0"/>
+    <testcase name="successForSalaryAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.GetAccountIdMethodTest" time="0.0"/>
+    <testcase name="successForCheckingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.GetAccountIdMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.client.ConstructorMethodTest" time="0.002">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.client.ConstructorMethodTest" time="0.001"/>
+    <testcase name="no9DigitsPhoneNumber" classname="pt.ulisboa.tecnico.learnjava.bank.client.ConstructorMethodTest" time="0.0"/>
+    <testcase name="negativeAge" classname="pt.ulisboa.tecnico.learnjava.bank.client.ConstructorMethodTest" time="0.0"/>
+    <testcase name="no9DigitsNif" classname="pt.ulisboa.tecnico.learnjava.bank.client.ConstructorMethodTest" time="0.001"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.account.UpgradeMethodTest" time="0.0">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.account.UpgradeMethodTest" time="0.0"/>
+    <testcase name="successWith5Accounts" classname="pt.ulisboa.tecnico.learnjava.bank.account.UpgradeMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.002">
+    <testcase name="clientHasAccountOfAnotherBank" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.001"/>
+    <testcase name="failYoungAccountMoreThan17" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.0"/>
+    <testcase name="successCheckingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.0"/>
+    <testcase name="successSalaryAccount" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.0"/>
+    <testcase name="failYoungAccountBaseNot10" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.0"/>
+    <testcase name="successYoungAccount" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.001"/>
+    <testcase name="successSavingsAccount" classname="pt.ulisboa.tecnico.learnjava.bank.bank.CreateAccountMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.GetAccountByAccountIdMethodTest" time="0.0">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.bank.GetAccountByAccountIdMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.002">
+    <testcase name="amountNotEqualToBalanceInSavingsAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.001"/>
+    <testcase name="successForSavingsAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="negativeAmountForSavingsAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="negativeAmountForSalaryAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="notEnoughBalanceForCheckingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="noWithdrawForYoung" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="successForCheckingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.001"/>
+    <testcase name="failNegativeBalanceForSalaryAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="negativeAmountForCheckingAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+    <testcase name="successNegativeBalanceForSalaryAccount" classname="pt.ulisboa.tecnico.learnjava.bank.account.WithdrawMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.BankConstructorMethodTest" time="0.001">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.bank.BankConstructorMethodTest" time="0.0"/>
+    <testcase name="sizeFourCode" classname="pt.ulisboa.tecnico.learnjava.bank.bank.BankConstructorMethodTest" time="0.001"/>
+    <testcase name="duplicateCode" classname="pt.ulisboa.tecnico.learnjava.bank.bank.BankConstructorMethodTest" time="0.0"/>
+    <testcase name="noNullCode" classname="pt.ulisboa.tecnico.learnjava.bank.bank.BankConstructorMethodTest" time="0.0"/>
+    <testcase name="sizeTwoCode" classname="pt.ulisboa.tecnico.learnjava.bank.bank.BankConstructorMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.bank.GetBankByCodeMethodTest" time="0.0">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.bank.GetBankByCodeMethodTest" time="0.0"/>
+    <testcase name="codeIsNull" classname="pt.ulisboa.tecnico.learnjava.bank.bank.GetBankByCodeMethodTest" time="0.0"/>
+    <testcase name="doesNotExist" classname="pt.ulisboa.tecnico.learnjava.bank.bank.GetBankByCodeMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.account.ConstructorMethodTest" time="0.001">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.account.ConstructorMethodTest" time="0.0"/>
+    <testcase name="limitOfAccountsPerClient" classname="pt.ulisboa.tecnico.learnjava.bank.account.ConstructorMethodTest" time="0.001"/>
+    <testcase name="nullClient" classname="pt.ulisboa.tecnico.learnjava.bank.account.ConstructorMethodTest" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.services.equalBankValidation" time="0.0">
+    <testcase name="success" classname="pt.ulisboa.tecnico.learnjava.bank.services.equalBankValidation" time="0.0"/>
+  </testsuite>
+  <testsuite name="pt.ulisboa.tecnico.learnjava.bank.client.HappyBirthdayMethodTest" time="0.001">
+    <testcase name="successUpGrade" classname="pt.ulisboa.tecnico.learnjava.bank.client.HappyBirthdayMethodTest" time="0.001"/>
+    <testcase name="successNoUpgrade" classname="pt.ulisboa.tecnico.learnjava.bank.client.HappyBirthdayMethodTest" time="0.0"/>
+  </testsuite>
+</testrun>
