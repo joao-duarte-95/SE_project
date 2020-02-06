@@ -38,24 +38,14 @@ public class MBWAYsplitBillController {
 					System.out.println("Something is wrong. Did you set the bill amount right?");
 					return;
 				}
-				MBWAYtransfer(friends[i].phoneNumber, target, friends[i].amount);
+				MBWAYtransferController tc = new MBWAYtransferController();
+				tc.MBWAYtransfer(MBWAYsplitBillController.class, friends[i].phoneNumber, target, friends[i].amount);
 			}
 			System.out.println("Bill payed successfully!"); resetCount();
 		} else if (count < numberOfFriends){
 			System.out.println("Oh no! One friend is missing."); resetCount();
 		} else {
 			System.out.println("Oh no! Too many friends."); resetCount();
-		}
-	}
-	
-	public void MBWAYtransfer(String sourcePhoneNumber, String targetPhoneNumber, int amount) throws SibsException, AccountException, OperationException {
-		Services services = new Services();
-		Sibs sibs = new Sibs(100, services);
-		if(MBWAY.datebase.containsKey(sourcePhoneNumber) &&  MBWAY.datebase.containsKey(targetPhoneNumber)) {
-			sibs.transfer(MBWAY.datebase.get(sourcePhoneNumber), MBWAY.datebase.get(targetPhoneNumber), amount);
-			sibs.processOperation();
-		} else {
-			System.out.println("Could not complete transfer!");
 		}
 	}
 	

@@ -49,7 +49,7 @@ public class CLI {
 			} else if (command.startsWith("confirm-mbway")) {
 				controller2.confirmMBWAY(input.next(), Integer.valueOf(input.next()));
 			} else if (command.startsWith("mbway-transfer")) {
-				controller3.MBWAYtransfer(input.next(),  input.next(), Integer.valueOf(input.next()));
+				controller3.MBWAYtransfer(MBWAYtransferController.class, input.next(),  input.next(), Integer.valueOf(input.next()));
 			} else if (command.startsWith("mbway-split-bill")) {
 				int numberOfFriends = Integer.valueOf(input.next());
 				int totalAmount = Integer.valueOf(input.next());
@@ -71,5 +71,6 @@ public class CLI {
 		}
 		
 	}
+
 
 }
