@@ -22,19 +22,25 @@ public class Retry extends State {
 		count++;
 		if (!(transferOperation.getState() instanceof Retry)) resetCount(); 
 		else if (count == 3) {
-			transferOperation.setState(this.previousState);
-			 if (this.previousState instanceof Withdrawn) sibs.services.deposit(transferOperation.getSourceIban(), transferOperation.getValue());
-			 else if (this.previousState instanceof Deposited) {
-				sibs.services.withdraw(transferOperation.getTargetIban(), transferOperation.getValue());
-				sibs.services.deposit(transferOperation.getSourceIban(), transferOperation.getValue());
-			} 
-			transferOperation.setState(new ErrorState()); 
-			resetCount();
+			throwError(sibs, transferOperation);
 		} else if (count < 3) transferOperation.setState(this.previousState);
+	}
+	
+	public void throwError(Sibs sibs, TransferOperation transferOperation) throws AccountException {
+		transferOperation.setState(this.previousState);
+		 if (this.previousState instanceof Withdrawn) sibs.services.deposit(transferOperation.getSourceIban(), transferOperation.getValue());
+		 else if (this.previousState instanceof Deposited) {
+			sibs.services.withdraw(transferOperation.getTargetIban(), transferOperation.getValue());
+			sibs.services.deposit(transferOperation.getSourceIban(), transferOperation.getValue());
+		} 
+		transferOperation.setState(new ErrorState()); 
+		resetCount();
 	}
 	
 	@Override
 	public void cancel(Sibs sibs, TransferOperation transferOperation) throws AccountException {
 	}
+	
+	
 	
 }

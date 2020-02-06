@@ -38,17 +38,13 @@ public class MBWAYsplitBillController {
 					System.out.println("Something is wrong. Did you set the bill amount right?");
 					return;
 				}
-				String source = friends[i].phoneNumber;
-				MBWAYtransfer(source, target, friends[i].amount);
+				MBWAYtransfer(friends[i].phoneNumber, target, friends[i].amount);
 			}
-			System.out.println("Bill payed successfully!");
-			resetCount();
+			System.out.println("Bill payed successfully!"); resetCount();
 		} else if (count < numberOfFriends){
-			System.out.println("Oh no! One friend is missing.");
-			resetCount();
-		} else if (count > numberOfFriends) {
-			System.out.println("Oh no! Too many friends.");
-			resetCount();
+			System.out.println("Oh no! One friend is missing."); resetCount();
+		} else {
+			System.out.println("Oh no! Too many friends."); resetCount();
 		}
 	}
 	
